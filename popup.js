@@ -67,6 +67,7 @@ class State {
 }
 
 const showPage = (target) => {
+  // TODO: loop and change class based on target
   document.querySelectorAll(".page").forEach((el) => el.classList.add("hidden"));
   document.querySelector(target).classList.remove("hidden");
 };
@@ -160,7 +161,10 @@ PORT.onMessage.addListener((msg) => {
   }
 });
 
-const reRender = () => PORT.postMessage({ action: "GET_STATE" });
+const reRender = () => {
+  state.sleep();
+  PORT.postMessage({ action: "GET_STATE" });
+};
 
 const protect = (fn) => {
   return (...args) => {
