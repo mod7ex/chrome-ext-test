@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <script src="popup.js"></script>
+  </head>
+  <body>
+    <div id="root">
+      <div class="page secret_page hidden">
+        <h4 class="secret_title">Secret</h4>
+        <div id="secret"></div>
+        <div class="action">
+          <button id="regenerate">re generate</button>
+          <button id="logout">log out</button>
+          <button id="next_btn">next</button>
+        </div>
+      </div>
+
+      <!--  -->
+
+      <div class="page auth_page hidden">
+        <form id="password_form">
+          <div class="form-section title">
+            <h3 class="auth_form_title">Password form</h3>
+          </div>
+          <div class="form-section">
+            <label for="password">
+              <span>Password</span>
+              <br />
+              <br />
+              <input id="password" name="password" type="password" />
+            </label>
+          </div>
+          <div class="form-section">
+            <label for="password_confirmation">
+              <span>Confirm Password</span>
+              <br />
+              <input id="password_confirmation" name="password_confirmation" type="password" />
+            </label>
+          </div>
+          <div class="form-section">
+            <button type="submit">Submit</button>
+          </div>
+        </form>
+        <br />
+        <button type="submit" id="reset">Reset</button>
+      </div>
+    </div>
+  </body>
+</html>
